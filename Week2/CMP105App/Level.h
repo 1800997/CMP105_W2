@@ -10,7 +10,12 @@ class Level{
 public:
 	Level(sf::RenderWindow* hwnd, Input* in);
 	~Level();
-
+	double calcX = 0;
+	double calcY = 0;
+	double calcX2 = 0;
+	double calcY2 = 0;
+	double distance = 0;
+	bool pressed = false;
 	void handleInput();
 	void update();
 	void render();
@@ -25,5 +30,8 @@ private:
 	Input* input;
 
 	// Add your object here
-
+	sf::Text mousePosition;
+	sf::Font font;
+	sf::CircleShape circle;
+	
 };
